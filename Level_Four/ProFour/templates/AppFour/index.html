@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+{% extends "AppFour/base.html" %}
+{% load my_extras %}
+  {% block body_block %}
+    <h1>Welcome to the Index Page!</h1>
+    <!-- Template filter takes the key from the dict,
+    then | symbol then filte to apply -->
+    <h1>{{ text|cut:'world' }}</h1>
+    <!-- Adding numbers to template tags use the key from the
+    context dict then | then tpass the number as
+    a string "#NUMBER GOES HERE#" -->
+    <h1>{{ number|add:'20' }}</h1>
+  {% endblock %}
